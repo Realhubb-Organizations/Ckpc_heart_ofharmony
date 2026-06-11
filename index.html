@@ -71,6 +71,21 @@
   details[open] summary .plus { transform: rotate(45deg); }
   details summary::-webkit-details-marker { display: none; }
   .modal-overlay { background: rgba(0,0,0,0.7); }
+  @keyframes chatbot-pop {
+    0% { transform: scale(0.85) translateY(8px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+  }
+  #chatbotWindow.flex { animation: chatbot-pop 0.2s ease-out; }
+  @keyframes chatbot-typing {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-3px); opacity: 1; }
+  }
+  .chatbot-typing-dot { animation: chatbot-typing 1s infinite ease-in-out; }
+  @keyframes chatbot-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  .chatbot-bounce { animation: chatbot-bounce 2.4s ease-in-out infinite; }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"RealEstateAgent","name":"Realhubb Ventures Pvt Ltd - Authorised Channel Partner","telephone":"+91 99801 89914","areaServed":"Hosur Main Road, Bengaluru","address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressRegion":"Karnataka","addressCountry":"IN"}},{"@type":"Residence","name":"CKPC Heart of Harmony","description":"137 signature 3 Bed, 3 Bed + Study and 4 Bed residences by CKPC in a single high-rise tower on Hosur Main Road, South Bengaluru.","address":{"@type":"PostalAddress","streetAddress":"Hosur Main Road","addressLocality":"Bengaluru","addressRegion":"Karnataka","addressCountry":"IN"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is Heart of Harmony located?","acceptedAnswer":{"@type":"Answer","text":"CKPC Heart of Harmony is located on Hosur Main Road, South Bengaluru — about 10 minutes from Silk Board and 400 metres from Kudlu Gate Metro Station (Yellow Line)."}},{"@type":"Question","name":"What configurations are available at Heart of Harmony?","acceptedAnswer":{"@type":"Answer","text":"137 signature residences across four configurations: 3 Bed Classic (1,786-1,824 sq.ft), 3 Bed Premium (1,981-2,184 sq.ft), 3 Bed + Study Luxe (2,132-2,189 sq.ft) and 4 Bed Grande (2,550-2,572 sq.ft), priced from Rs 2.43 Cr to Rs 3.81 Cr, all-inclusive."}},{"@type":"Question","name":"Who is the developer of Heart of Harmony?","acceptedAnswer":{"@type":"Answer","text":"CKPC Heart of Harmony is developed by CKPC and is RERA registered under PRM/KA/RERA/1251/310/PR/310326/008560, with possession scheduled for March 2030."}}]}]}
@@ -86,7 +101,6 @@
     </a>
     <nav aria-label="Primary" class="hidden flex-1 lg:block">
       <ul class="flex items-center justify-center gap-1 text-sm font-medium text-foreground">
-        <li><a href="#price" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Price</a></li>
         <li><a href="#floorplans" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Floor Plan</a></li>
         <!-- <li><button type="button" onclick="openModal('Configurations &amp; Floor Plan')" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground cursor-pointer">Configurations</button></li> -->
         <li><a href="#amenities" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Advantages</a></li>
@@ -100,7 +114,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 shrink-0">
         <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
       </svg>
-      <span class="hidden sm:inline">+91 99801 89914</span>
+      <span class="hidden sm:inline"></span>
     </a>
     <a href="https://wa.me/919980189914?text=Hi%2C%20I%27m%20interested%20in%20CKPC%20Heart%20of%20Harmony" target="_blank" rel="noopener" class="wa-pulse flex shrink-0 items-center justify-center gap-2 rounded-t-xl bg-[#25D366] px-4 py-3 text-sm font-bold text-white shadow-lg ring-1 ring-black/10 transition-transform duration-200 hover:scale-[1.02] lg:fixed lg:right-5 lg:top-[1.1rem] lg:z-40 lg:w-[320px] lg:rounded-b-none lg:ring-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0">
@@ -253,41 +267,6 @@
   </div>
 </section>
 
-<!-- PRICE & CONFIGURATIONS -->
-<section id="price" class="bg-muted py-16">
-  <div class="mx-auto max-w-6xl px-4">
-    <h2 class="text-center text-3xl font-bold text-primary md:text-4xl">Heart of Harmony — Price &amp; Configurations</h2>
-    <div class="mx-auto mt-4 h-1 w-24 bg-accent"></div>
-    <p class="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">137 signature residences in a single high-rise tower on Hosur Main Road. Pricing shown is all-inclusive, excluding Stamp Duty &amp; Registration.</p>
-    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <article class="flex flex-col overflow-hidden rounded-2xl bg-card p-6 text-center shadow-lg ring-1 ring-border">
-        <h3 class="text-lg font-bold text-primary">3 Bed Residence<br /><span class="text-accent">(Classic)</span></h3>
-        <p class="mt-2 text-sm text-muted-foreground">1,786 – 1,824 sq.ft</p>
-        <p class="mt-3 text-xl font-bold text-accent">₹ 2.43 – 2.59 Cr</p>
-        <button type="button" onclick="openModal('Request Price Sheet — 3 Bed Classic')" class="shake-cta mt-5 inline-block rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Request Price Sheet</button>
-      </article>
-      <article class="flex flex-col overflow-hidden rounded-2xl bg-card p-6 text-center shadow-lg ring-1 ring-border">
-        <h3 class="text-lg font-bold text-primary">3 Bed Residence<br /><span class="text-accent">(Premium)</span></h3>
-        <p class="mt-2 text-sm text-muted-foreground">1,981 – 2,184 sq.ft</p>
-        <p class="mt-3 text-xl font-bold text-accent">₹ 2.74 – 3.09 Cr</p>
-        <button type="button" onclick="openModal('Request Price Sheet — 3 Bed Premium')" class="shake-cta mt-5 inline-block rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Request Price Sheet</button>
-      </article>
-      <article class="flex flex-col overflow-hidden rounded-2xl bg-card p-6 text-center shadow-lg ring-1 ring-border">
-        <h3 class="text-lg font-bold text-primary">3 Bed + Study<br /><span class="text-accent">(Luxe)</span></h3>
-        <p class="mt-2 text-sm text-muted-foreground">2,132 – 2,189 sq.ft</p>
-        <p class="mt-3 text-xl font-bold text-accent">₹ 2.99 – 3.20 Cr</p>
-        <button type="button" onclick="openModal('Request Price Sheet — 3 Bed + Study Luxe')" class="shake-cta mt-5 inline-block rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Request Price Sheet</button>
-      </article>
-      <article class="flex flex-col overflow-hidden rounded-2xl bg-card p-6 text-center shadow-lg ring-1 ring-border">
-        <h3 class="text-lg font-bold text-primary">4 Bed Residence<br /><span class="text-accent">(Grande)</span></h3>
-        <p class="mt-2 text-sm text-muted-foreground">2,550 – 2,572 sq.ft</p>
-        <p class="mt-3 text-xl font-bold text-accent">₹ 3.64 – 3.81 Cr</p>
-        <button type="button" onclick="openModal('Request Price Sheet — 4 Bed Grande')" class="shake-cta mt-5 inline-block rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Request Price Sheet</button>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- FLOOR PLANS -->
 <section id="floorplans" class="bg-background py-16">
   <div class="mx-auto max-w-6xl px-4">
@@ -297,7 +276,7 @@
     <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       <article class="overflow-hidden rounded-2xl bg-card shadow-lg ring-1 ring-border">
         <div class="relative aspect-[4/3] overflow-hidden bg-muted">
-          <img src="image1.png" alt="3 Bed Residence (Classic) Floor Plan" class="h-full w-full scale-110 object-cover blur-md" />
+          <img src="floorplan.png" alt="3 Bed Residence (Classic) Floor Plan" class="h-full w-full scale-110 object-cover blur-sm" />
           <div class="absolute inset-0 flex items-center justify-center bg-black/10">
             <span class="rounded-full bg-white/95 px-4 py-2 text-center text-xs font-semibold text-foreground shadow-lg">🔒 Unlock Detailed Floor Plan</span>
           </div>
@@ -311,7 +290,7 @@
       </article>
       <article class="overflow-hidden rounded-2xl bg-card shadow-lg ring-1 ring-border">
         <div class="relative aspect-[4/3] overflow-hidden bg-muted">
-          <img src="image2.png" alt="3 Bed Residence (Premium) Floor Plan" class="h-full w-full scale-110 object-cover blur-md" />
+          <img src="floorplan.png" alt="3 Bed Residence (Premium) Floor Plan" class="h-full w-full scale-110 object-cover blur-sm" />
           <div class="absolute inset-0 flex items-center justify-center bg-black/10">
             <span class="rounded-full bg-white/95 px-4 py-2 text-center text-xs font-semibold text-foreground shadow-lg">🔒 Unlock Detailed Floor Plan</span>
           </div>
@@ -325,7 +304,7 @@
       </article>
       <article class="overflow-hidden rounded-2xl bg-card shadow-lg ring-1 ring-border">
         <div class="relative aspect-[4/3] overflow-hidden bg-muted">
-          <img src="image3.png" alt="3 Bed + Study (Luxe) Floor Plan" class="h-full w-full scale-110 object-cover blur-md" />
+          <img src="floorplan.png" alt="3 Bed + Study (Luxe) Floor Plan" class="h-full w-full scale-110 object-cover blur-sm" />
           <div class="absolute inset-0 flex items-center justify-center bg-black/10">
             <span class="rounded-full bg-white/95 px-4 py-2 text-center text-xs font-semibold text-foreground shadow-lg">🔒 Unlock Detailed Floor Plan</span>
           </div>
@@ -339,7 +318,7 @@
       </article>
       <article class="overflow-hidden rounded-2xl bg-card shadow-lg ring-1 ring-border">
         <div class="relative aspect-[4/3] overflow-hidden bg-muted">
-          <img src="image4.png" alt="4 Bed Residence (Grande) Floor Plan" class="h-full w-full scale-110 object-cover blur-md" />
+          <img src="floorplan.png" alt="4 Bed Residence (Grande) Floor Plan" class="h-full w-full scale-110 object-cover blur-sm" />
           <div class="absolute inset-0 flex items-center justify-center bg-black/10">
             <span class="rounded-full bg-white/95 px-4 py-2 text-center text-xs font-semibold text-foreground shadow-lg">🔒 Unlock Detailed Floor Plan</span>
           </div>
@@ -578,14 +557,54 @@
   </div>
 </div>
 
+<!-- CHATBOT WIDGET -->
+<svg width="0" height="0" class="hidden" aria-hidden="true">
+  <symbol id="chatbotAvatarSvg" viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="20" fill="oklch(0.75 0.15 75)"/>
+    <path d="M1 39 C1 28 9 23 20 23 C31 23 39 28 39 39 Z" fill="oklch(0.22 0.04 250)"/>
+    <circle cx="20" cy="16" r="9" fill="#F4C7A6"/>
+    <path d="M10.5 15 C10.5 6.5 29.5 6.5 29.5 15 C29.5 10.5 25 8.5 20 8.5 C15 8.5 10.5 10.5 10.5 15 Z" fill="#4A2E1E"/>
+    <path d="M10 15 C9 21.5 11.5 26.5 14.5 27.5 C12.5 23.5 12.5 18.5 12.5 15 Z" fill="#4A2E1E"/>
+    <path d="M30 15 C31 21.5 28.5 26.5 25.5 27.5 C27.5 23.5 27.5 18.5 27.5 15 Z" fill="#4A2E1E"/>
+  </symbol>
+</svg>
+<div class="fixed bottom-20 right-4 z-40 md:bottom-6 md:right-6">
+  <div id="chatbotWindow" class="absolute bottom-full right-0 mb-3 hidden h-[28rem] max-h-[75vh] w-[90vw] max-w-[320px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10">
+    <div class="flex items-center justify-between gap-2 bg-primary px-4 py-3 text-primary-foreground">
+      <div class="flex items-center gap-2">
+        <svg class="h-9 w-9 shrink-0 rounded-full" aria-hidden="true"><use href="#chatbotAvatarSvg"/></svg>
+        <div>
+          <p class="text-sm font-bold leading-tight">Mina</p>
+          <p class="text-[11px] leading-tight opacity-80">Heart of Harmony Assistant · Online</p>
+        </div>
+      </div>
+      <button type="button" onclick="toggleChatbot()" aria-label="Close chat" class="rounded-full p-1 text-base leading-none transition hover:bg-white/10">✕</button>
+    </div>
+    <div id="chatbotMessages" aria-live="polite" class="flex flex-1 flex-col gap-2 overflow-y-auto bg-muted/40 p-3"></div>
+    <div id="chatbotQuickReplies" class="flex flex-wrap gap-2 border-t border-border bg-white px-3 py-2 empty:hidden"></div>
+    <form id="chatbotForm" class="flex items-center gap-2 border-t border-border bg-white p-2">
+      <input id="chatbotInput" type="text" autocomplete="off" placeholder="Type here…" aria-label="Type your message" class="w-full rounded-full border border-border bg-transparent px-3 py-2 text-sm outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20" />
+      <button type="submit" aria-label="Send message" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze text-white transition hover:opacity-90">➤</button>
+    </form>
+  </div>
+  <button id="chatbotToggle" type="button" onclick="toggleChatbot()" aria-label="Open chat assistant" aria-expanded="false" class="chatbot-bounce relative flex h-14 w-14 items-center justify-center rounded-full bg-bronze text-2xl text-white shadow-2xl ring-1 ring-black/10 transition-transform duration-200 hover:scale-105">
+    <svg id="chatbotIconChat" class="h-11 w-11 rounded-full" aria-hidden="true"><use href="#chatbotAvatarSvg"/></svg>
+    <span id="chatbotIconClose" class="hidden">✕</span>
+    <span id="chatbotBadge" class="absolute -right-1 -top-1 h-5 w-5 rounded-full bg-accent text-center text-[10px] font-bold leading-5 text-white ring-2 ring-white">1</span>
+  </button>
+</div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   const modal = document.getElementById('enquiryModal');
   const titleEl = document.getElementById('modalTitle');
   const subtitleEl = document.getElementById('modalSubtitle');
+  const modalBodyEl = document.getElementById('modalBody');
+  const modalBodyDefaultHTML = modalBodyEl.innerHTML;
   let videoGateActive = false;
   function openModal(heading) {
     videoGateActive = false;
+    modalBodyEl.innerHTML = modalBodyDefaultHTML;
     titleEl.textContent = heading || 'Enquire Now';
     subtitleEl.textContent = 'Share your details — our channel partner will call you back instantly.';
     modal.classList.remove('hidden');
@@ -678,7 +697,169 @@
   }
 
   // auto-open after 5s
-  setTimeout(() => { if (modal.classList.contains('hidden')) openModal('Get Exclusive Project Details'); }, 5000);
+  setTimeout(() => { if (modal.classList.contains('hidden') && chatbotWindow.classList.contains('hidden')) openModal('Get Exclusive Project Details'); }, 5000);
+
+  // CHATBOT
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotMessages = document.getElementById('chatbotMessages');
+  const chatbotQuickReplies = document.getElementById('chatbotQuickReplies');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotBadge = document.getElementById('chatbotBadge');
+  const chatbotToggleBtn = document.getElementById('chatbotToggle');
+  const chatbotIconChat = document.getElementById('chatbotIconChat');
+  const chatbotIconClose = document.getElementById('chatbotIconClose');
+
+  const CHATBOT_WA_LINK = "https://wa.me/919980189914?text=Hi%2C%20I%27m%20interested%20in%20CKPC%20Heart%20of%20Harmony.%20Please%20share%20the%20brochure%2C%20floor%20plan%20%26%20price%20list.";
+
+  const CHATBOT_MAIN_OPTIONS = [
+    { label: '📄 Brochure', value: 'brochure', modalTitle: 'Chatbot: Download Brochure' },
+    { label: '🏠 Floor Plan', value: 'floorplan', modalTitle: 'Chatbot: Floor Plan Request' },
+    { label: '💰 Price List', value: 'price', modalTitle: 'Chatbot: Price List Request' },
+    { label: '📅 Schedule Site Visit', value: 'visit', modalTitle: 'Chatbot: Schedule Site Visit' },
+    { label: '💬 Send Details on WhatsApp', value: 'whatsapp', modalTitle: '' },
+  ];
+
+  let chatbotOpened = false;
+  let chatbotState = 'menu'; // menu -> askName -> menu
+  let chatbotPendingModalTitle = 'Chatbot: Enquiry';
+  let chatbotLeadName = '';
+
+  function toggleChatbot() {
+    const isHidden = chatbotWindow.classList.contains('hidden');
+    if (isHidden) {
+      chatbotWindow.classList.remove('hidden');
+      chatbotWindow.classList.add('flex');
+      chatbotIconChat.classList.add('hidden');
+      chatbotIconClose.classList.remove('hidden');
+      chatbotToggleBtn.classList.remove('chatbot-bounce');
+      chatbotToggleBtn.setAttribute('aria-expanded', 'true');
+      if (chatbotBadge) chatbotBadge.classList.add('hidden');
+      if (!chatbotOpened) {
+        chatbotOpened = true;
+        chatbotBotMessage('Welcome to <strong>CKPC Heart of Harmony</strong>! 👋<br>How can I assist you today?');
+        setTimeout(() => chatbotShowQuickReplies(CHATBOT_MAIN_OPTIONS), 600);
+      }
+      chatbotInput.focus();
+    } else {
+      chatbotWindow.classList.add('hidden');
+      chatbotWindow.classList.remove('flex');
+      chatbotIconChat.classList.remove('hidden');
+      chatbotIconClose.classList.add('hidden');
+      chatbotToggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function chatbotAddMessage(html, who) {
+    const wrap = document.createElement('div');
+    wrap.className = who === 'user' ? 'flex justify-end' : 'flex justify-start';
+    const bubble = document.createElement('div');
+    bubble.className = who === 'user'
+      ? 'max-w-[85%] rounded-2xl rounded-br-sm bg-bronze px-3 py-2 text-sm text-white'
+      : 'max-w-[85%] rounded-2xl rounded-bl-sm bg-white px-3 py-2 text-sm text-foreground shadow-sm ring-1 ring-border';
+    bubble.innerHTML = html;
+    wrap.appendChild(bubble);
+    chatbotMessages.appendChild(wrap);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+  function chatbotUserMessage(text) {
+    chatbotAddMessage(text.replace(/</g, '&lt;'), 'user');
+  }
+  function chatbotBotMessage(html) {
+    chatbotShowTyping();
+    setTimeout(() => {
+      chatbotHideTyping();
+      chatbotAddMessage(html, 'bot');
+    }, 500);
+  }
+  function chatbotShowTyping() {
+    const wrap = document.createElement('div');
+    wrap.id = 'chatbotTyping';
+    wrap.className = 'flex justify-start';
+    wrap.innerHTML = '<div class="flex items-center gap-1 rounded-2xl rounded-bl-sm bg-white px-3 py-2.5 shadow-sm ring-1 ring-border">'
+      + '<span class="chatbot-typing-dot h-1.5 w-1.5 rounded-full bg-muted-foreground"></span>'
+      + '<span class="chatbot-typing-dot h-1.5 w-1.5 rounded-full bg-muted-foreground" style="animation-delay:0.15s"></span>'
+      + '<span class="chatbot-typing-dot h-1.5 w-1.5 rounded-full bg-muted-foreground" style="animation-delay:0.3s"></span></div>';
+    chatbotMessages.appendChild(wrap);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+  function chatbotHideTyping() {
+    const el = document.getElementById('chatbotTyping');
+    if (el) el.remove();
+  }
+  function chatbotShowQuickReplies(options) {
+    chatbotQuickReplies.innerHTML = '';
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'rounded-full border border-bronze/40 bg-bronze/5 px-3 py-1.5 text-xs font-semibold text-bronze transition hover:bg-bronze hover:text-white';
+      btn.textContent = opt.label;
+      btn.onclick = () => chatbotHandleOption(opt);
+      chatbotQuickReplies.appendChild(btn);
+    });
+    // Quick replies appearing shrinks the messages pane; re-pin scroll to bottom.
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+  function chatbotClearQuickReplies() {
+    chatbotQuickReplies.innerHTML = '';
+  }
+  function chatbotAskName(modalTitle, message) {
+    chatbotPendingModalTitle = modalTitle;
+    chatbotState = 'askName';
+    chatbotBotMessage(message);
+  }
+  function chatbotOpenEnquiryModal(title) {
+    openModal(title);
+    const nameInput = document.querySelector('#modalBody input[name="name"]');
+    if (nameInput) nameInput.value = chatbotLeadName;
+  }
+  function chatbotProcessSelection(opt) {
+    if (opt.value === 'whatsapp') {
+      chatbotBotMessage("Sure! Opening WhatsApp so our team can share the brochure, floor plan &amp; price list with you directly. 💬");
+      setTimeout(() => window.open(CHATBOT_WA_LINK, '_blank'), 700);
+      setTimeout(() => chatbotShowQuickReplies(CHATBOT_MAIN_OPTIONS), 1200);
+      return;
+    }
+    chatbotAskName(opt.modalTitle, "Great choice! May I know your name, please? 🙂");
+  }
+  function chatbotHandleOption(opt) {
+    chatbotUserMessage(opt.label);
+    chatbotClearQuickReplies();
+    chatbotProcessSelection(opt);
+  }
+
+  chatbotForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const val = chatbotInput.value.trim();
+    if (!val) return;
+    chatbotUserMessage(val);
+    chatbotInput.value = '';
+
+    if (chatbotState === 'askName') {
+      chatbotLeadName = val;
+      chatbotState = 'menu';
+      chatbotBotMessage(`Thanks, ${chatbotLeadName.split(' ')[0]}! Just pop your number into the form and our team will send the details right away. 📋`);
+      setTimeout(() => chatbotOpenEnquiryModal(chatbotPendingModalTitle), 900);
+      setTimeout(() => chatbotShowQuickReplies(CHATBOT_MAIN_OPTIONS), 1500);
+      return;
+    }
+
+    // chatbotState === 'menu' -> route free text
+    const lower = val.toLowerCase();
+    let matched = null;
+    if (lower.includes('brochure')) matched = CHATBOT_MAIN_OPTIONS[0];
+    else if (lower.includes('floor') || lower.includes('plan')) matched = CHATBOT_MAIN_OPTIONS[1];
+    else if (lower.includes('price') || lower.includes('cost') || lower.includes('cr')) matched = CHATBOT_MAIN_OPTIONS[2];
+    else if (lower.includes('visit') || lower.includes('site')) matched = CHATBOT_MAIN_OPTIONS[3];
+    else if (lower.includes('whatsapp')) matched = CHATBOT_MAIN_OPTIONS[4];
+
+    if (matched) {
+      chatbotClearQuickReplies();
+      chatbotProcessSelection(matched);
+    } else {
+      chatbotAskName('Chatbot: Enquiry', "Thanks for reaching out! Let me connect you with our team. May I know your name, please? 🙂");
+    }
+  });
 </script>
 </body>
 </html>
