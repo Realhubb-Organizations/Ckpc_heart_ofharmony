@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ckpc-heart-of-harmony.newlaunches.co.in/sitemap.xml
+Sitemap: https://ckpc-heartofharmony.newlaunches.co.in/sitemap.xml
