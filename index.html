@@ -177,6 +177,20 @@
   ]
 }
 </script>
+    <script id="seo-canonical-helper">
+      // Dynamically align canonical URL and Open Graph URL with the current browser URL
+      (function() {
+        var canonicalUrl = window.location.protocol + '//' + window.location.host + window.location.pathname.replace(/\/$/, "");
+        var link = document.querySelector('link[rel="canonical"]');
+        if (link) {
+          link.setAttribute('href', canonicalUrl);
+        }
+        var ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) {
+          ogUrl.setAttribute('content', canonicalUrl);
+        }
+      })();
+    </script>
 </head>
 <body class="min-h-screen lg:pr-[360px]">
 
