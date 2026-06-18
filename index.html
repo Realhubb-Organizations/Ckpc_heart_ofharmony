@@ -742,6 +742,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       iframe.src = src + (src.includes('?') ? '&' : '?') + 'autoplay=1';
     }
   }
+  if (localStorage.getItem('videoUnlocked') === 'true') {
+    unlockVideo();
+  }
   document.querySelectorAll('.policy-date').forEach(el => {
     el.textContent = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
   });
@@ -759,7 +762,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbybEOa388tT3YfKyYxx3YG5CVxK64Z2D7lUqZ6-KdsSpmGwtkk87e_xDqKQ_jsdgrM/exec';
   function sendToSheet(data) {
-    fetch(SHEET_ENDPOINT, {
+    return fetch(SHEET_ENDPOINT, {
       method: 'POST',
       mode: 'no-cors',
       body: new URLSearchParams(data)
@@ -767,29 +770,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   function submitModal(e, form) {
     e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+    }
+    localStorage.setItem('videoUnlocked', 'true');
     sendToSheet({
       name: form.name.value,
       phone: form.phone.value,
       email: form.email.value,
       source: titleEl.textContent || 'Enquiry Modal'
+    }).then(() => {
+      window.location.href = 'thankyou.html';
+    }).catch(() => {
+      window.location.href = 'thankyou.html';
     });
-    if (videoGateActive) {
-      unlockVideo();
-      videoGateActive = false;
-      document.getElementById('modalBody').innerHTML = '<div class="mt-4 rounded-md bg-secondary p-4 text-center text-sm text-secondary-foreground"><p class="font-semibold">Thank you!</p><p class="mt-1">Enjoy the video — our channel partner will reach out on the number provided.</p><button onclick="closeModal()" class="mt-3 rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground">Close &amp; Watch</button></div>';
-    } else {
-      document.getElementById('modalBody').innerHTML = '<div class="mt-4 rounded-md bg-secondary p-4 text-center text-sm text-secondary-foreground"><p class="font-semibold">Thank you!</p><p class="mt-1">Our channel partner will reach out on the number provided.</p><button onclick="closeModal()" class="mt-3 rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground">Close</button></div>';
-    }
   }
   function submitInline(e, form) {
     e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+    }
+    localStorage.setItem('videoUnlocked', 'true');
     sendToSheet({
       name: form.name.value,
       phone: form.phone.value,
       email: '',
       source: 'Express Your Interest (Sidebar Form)'
+    }).then(() => {
+      window.location.href = 'thankyou.html';
+    }).catch(() => {
+      window.location.href = 'thankyou.html';
     });
-    form.innerHTML = '<p class="rounded-md bg-secondary p-4 text-center text-sm text-secondary-foreground">Thank you! Our channel partner will call you shortly.</p>';
   }
 
   // Hero slide rotation
@@ -972,6 +987,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       chatbotAskName('Chatbot: Enquiry', "Thanks for reaching out! Let me connect you with our team. May I know your name, please? 🙂");
     }
   });
+
+  // Open modal if page query parameter indicates it
+  const urlParams = new URLSearchParams(window.location.search);
+  const openModalParam = urlParams.get('openModal');
+  if (openModalParam) {
+    setTimeout(() => {
+      openModal(openModalParam);
+    }, 100);
+  }
 </script>
 </body>
 </html>
