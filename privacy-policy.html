@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | CKPC Heart of Harmony Bengaluru</title>
+  <meta name="description" content="Privacy Policy for CKPC Heart of Harmony on Hosur Main Road, Bengaluru. Read about how we collect, use, and protect your information." />
+  <link rel="canonical" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&amp;family=Plus+Jakarta+Sans:wght@500;700;800&amp;display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: 'oklch(0.99 0.005 80)',
+            foreground: 'oklch(0.18 0.02 250)',
+            card: 'oklch(1 0 0)',
+            'card-foreground': 'oklch(0.18 0.02 250)',
+            primary: { DEFAULT: 'oklch(0.22 0.04 250)', foreground: 'oklch(0.99 0 0)' },
+            secondary: { DEFAULT: 'oklch(0.96 0.02 60)', foreground: 'oklch(0.22 0.04 250)' },
+            muted: { DEFAULT: 'oklch(0.96 0.01 80)', foreground: 'oklch(0.45 0.02 250)' },
+            accent: { DEFAULT: 'oklch(0.68 0.16 50)', foreground: 'oklch(1 0 0)' },
+            gold: 'oklch(0.75 0.15 75)',
+            bronze: 'oklch(0.55 0.09 45)',
+            border: 'oklch(0.929 0.013 255.508)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: oklch(0.99 0.005 80); color: oklch(0.18 0.02 250); font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, Cambria, serif; }
+    .text-gold { color: oklch(0.75 0.15 75); }
+    @keyframes shake-cta {
+      0%, 92%, 100% { transform: translateX(0) rotate(0); }
+      93% { transform: translateX(-3px) rotate(-1deg); }
+      94% { transform: translateX(3px) rotate(1deg); }
+      95% { transform: translateX(-3px) rotate(-1deg); }
+      96% { transform: translateX(3px) rotate(1deg); }
+      97% { transform: translateX(-2px) rotate(0); }
+      98% { transform: translateX(2px) rotate(0); }
+    }
+    .shake-cta { animation: shake-cta 2.6s ease-in-out infinite; transform-origin: center; display: inline-block; }
+    @keyframes wa-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+      50% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+    }
+    .wa-pulse { animation: wa-pulse 1.8s ease-in-out infinite; }
+    .modal-overlay { background: rgba(0,0,0,0.7); }
+    @keyframes chatbot-pop {
+      0% { transform: scale(0.85) translateY(8px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    #chatbotWindow.flex { animation: chatbot-pop 0.2s ease-out; }
+    @keyframes chatbot-typing {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-3px); opacity: 1; }
+    }
+    .chatbot-typing-dot { animation: chatbot-typing 1s infinite ease-in-out; }
+    @keyframes chatbot-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .chatbot-bounce { animation: chatbot-bounce 2.4s ease-in-out infinite; }
+  </style>
+  <script>
+    // Dynamically align canonical URL
+    (function() {
+      var canonicalUrl = window.location.protocol + '//' + window.location.host + window.location.pathname.replace(/\/$/, "");
+      var link = document.querySelector('link[rel="canonical"]');
+      if (link) {
+        link.setAttribute('href', canonicalUrl);
+      }
+    })();
+  </script>
+</head>
+<body class="min-h-screen lg:pr-[360px] flex flex-col">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-white shadow-sm lg:-mr-[360px] lg:pr-[360px]">
+  <div class="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 py-2">
+    <a href="index.html" aria-label="CKPC Heart of Harmony home" class="flex shrink-0 items-center gap-3">
+      <img src="ckpc-logo.png" alt="CKPC Logo" title="CKPC Logo" class="h-7 w-auto md:h-8" />
+      <div class="flex flex-col justify-center border-l border-border pl-3">
+        <span class="font-serif text-base md:text-lg font-bold leading-none text-primary">Heart of Harmony</span>
+        <span class="font-sans text-[9px] md:text-[10px] font-semibold tracking-wider text-bronze uppercase leading-none mt-1">Authorised Channel Partner</span>
+      </div>
+    </a>
+    <nav aria-label="Primary" class="hidden flex-1 lg:block">
+      <ul class="flex items-center justify-center gap-1 text-sm font-medium text-foreground">
+        <li><a href="index.html#floorplans" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Floor Plan</a></li>
+        <li><a href="index.html#amenities" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Advantages</a></li>
+        <li><a href="index.html?openModal=Gallery" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Gallery</a></li>
+        <li><a href="index.html#location" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Location</a></li>
+        <li><a href="index.html?openModal=Download Brochure" class="rounded-md px-3 py-2 transition-colors hover:bg-primary hover:text-primary-foreground">Download Brochure</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+919980189914" class="flex shrink-0 items-center gap-2 rounded-full bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:scale-105">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 shrink-0">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      <span class="hidden sm:inline">Call Now</span>
+    </a>
+    <a href="https://wa.me/919980189914?text=Hi%2C%20I%27m%20interested%20in%20CKPC%20Heart%20of%20Harmony" target="_blank" rel="noopener" class="wa-pulse flex shrink-0 items-center justify-center gap-2 rounded-t-xl bg-[#25D366] px-4 py-3 text-sm font-bold text-white shadow-lg ring-1 ring-black/10 transition-transform duration-200 hover:scale-[1.02] lg:fixed lg:right-5 lg:top-[1.1rem] lg:z-40 lg:w-[320px] lg:rounded-b-none lg:ring-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0">
+          <path d="M12.012 2C6.486 2 2 6.486 2 12.012c0 1.835.488 3.555 1.34 5.04L2 22l5.094-1.32a9.96 9.96 0 0 0 4.918 1.293h.005c5.526 0 10.012-4.486 10.012-10.012C22 6.486 17.538 2 12.012 2zm0 18.04a8.026 8.026 0 0 1-4.085-1.115l-.293-.174-3.026.784.808-2.948-.19-.302a8.024 8.024 0 0 1-1.232-4.273c0-4.434 3.605-8.04 8.04-8.04 4.434 0 8.04 3.606 8.04 8.04 0 4.435-3.606 8.028-8.062 8.028zm4.46-6.018c-.244-.122-1.444-.713-1.668-.794-.224-.082-.387-.122-.55.122-.163.244-.63.794-.773.957-.142.163-.285.183-.529.061-.244-.122-1.03-.38-1.962-1.21-.725-.647-1.215-1.447-1.357-1.69-.142-.245-.015-.377.107-.499.11-.11.244-.285.366-.428.122-.143.163-.245.244-.408.082-.163.04-.306-.02-.428-.061-.122-.55-1.324-.753-1.813-.198-.477-.4-.412-.55-.42-.142-.006-.305-.008-.468-.008-.163 0-.428.061-.652.306-.224.245-.855.835-.855 2.037 0 1.202.875 2.363.997 2.526.122.163 1.722 2.629 4.173 3.687.583.252 1.038.402 1.393.514.585.186 1.118.16 1.539.097.47-.07 1.444-.59 1.648-1.16.204-.57.204-1.06.142-1.16-.06-.103-.223-.163-.467-.286z"/>
+        </svg>
+        <span>Connect Here on WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<div class="flex-1 flex justify-center w-full px-6 py-12">
+  <main class="w-full max-w-2xl">
+    <h1 class="text-3xl font-bold text-primary md:text-4xl text-center">Privacy Policy</h1>
+    <p class="mt-2 text-sm text-muted-foreground text-center">Last Updated: <span class="policy-date"></span></p>
+    <div class="mt-8 space-y-6 text-sm leading-7 text-foreground/90 text-center">
+      <p>This website is managed by <strong>Realhubb Ventures Pvt Ltd</strong>, an authorised RERA-registered real estate agent (RERA Registration No. PRM/KA/RERA/1251/309/AG/240926/005147) and channel partner for CKPC Heart of Harmony, Hosur Main Road, Bengaluru. We respect your privacy and are committed to protecting any personal information you share with us through this website.</p>
+
+      <div>
+        <h2 class="text-lg font-bold text-foreground mb-2 text-center">1. Information We Collect</h2>
+        <p>When you submit an enquiry, schedule a site visit, or download our brochure, we may collect details such as your name, phone number, email address and any other information you choose to provide.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-foreground mb-2 text-center">2. How We Use Your Information</h2>
+        <p>Your information is used to respond to your enquiry, share project updates, brochures, pricing and floor plans, and to assist with site visits and bookings for Heart of Harmony. By submitting your details, you consent to receive communication via Call, SMS, WhatsApp or Email.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-foreground mb-2 text-center">3. Sharing of Information</h2>
+        <p>To provide seamless service, we may share your data with RERA-registered associates, brokers and the project developer (CKPC) for further processing and expert assistance.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-foreground mb-2 text-center">4. Data Security</h2>
+        <p>We take reasonable precautions to protect your personal information from unauthorised access, alteration, disclosure or destruction.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-foreground mb-2 text-center">5. Your Choices</h2>
+        <p>You may opt out of further communication at any time by contacting us at +91 99801 89914.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- SIDEBAR (STICKY ON DESKTOP) -->
+  <div class="hidden lg:flex lg:fixed lg:right-5 lg:top-[4rem] lg:z-30 lg:w-[320px] lg:h-[calc(100vh-4rem)] lg:flex-col lg:gap-0 lg:overflow-hidden">
+    <div class="flex flex-1 flex-col overflow-hidden rounded-xl bg-white p-4 shadow-2xl ring-1 ring-black/10 transition-shadow duration-300 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)]">
+      <h2 class="text-lg font-bold leading-snug text-foreground">Pre-Register here for <span class="text-gold">Best Benefits</span></h2>
+      <form class="mt-3 space-y-2" onsubmit="submitInline(event, this)">
+        <input required type="text" name="name" minlength="3" pattern="^[a-zA-Z\s\.]+$" title="Please enter a valid name (at least 3 characters, letters/spaces only)" placeholder="Enter Your Name here…" aria-label="Your name" class="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20" />
+        <div class="flex gap-2">
+          <span class="flex shrink-0 items-center gap-1 rounded-md border border-border bg-muted px-3 text-sm">🇮🇳 <span class="text-[10px] text-muted-foreground">▾</span></span>
+          <input required type="tel" name="phone" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" placeholder="Phone Number" aria-label="Phone" class="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20" />
+        </div>
+        <label class="flex items-start gap-2 text-[10px] leading-snug text-muted-foreground cursor-pointer">
+          <input required type="checkbox" checked class="mt-0.5 h-3.5 w-3.5 shrink-0 accent-bronze" />
+          <span>I authorize company representatives of Realhubb ventures pvt ltd to Call, SMS, Email or WhatsApp me about its products and offers. This consent overrides any registration for DNC/NDNC</span>
+        </label>
+        <button type="submit" class="w-full rounded-md bg-bronze py-2.5 text-sm font-bold text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:opacity-90">Express Your Interest</button>
+      </form>
+      <div class="group mt-3 min-h-[6rem] flex-1 overflow-hidden rounded-xl shadow-md">
+        <div class="relative h-full overflow-hidden">
+          <img src="side.png" alt="CKPC Heart of Harmony — Luxury Residences" title="CKPC Heart of Harmony High-Rise Residences" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-2">
+            <p class="text-[11px] font-bold uppercase tracking-wide text-white">CKPC Heart of Harmony — Luxury Residences</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2 border-t border-border pt-3 text-center">
+        <button type="button" onclick="openModal('Instant Call Back')" class="group flex flex-col items-center gap-1.5">
+          <span class="relative flex h-10 w-10 items-center justify-center rounded-full border border-border text-base text-primary transition-all duration-200 group-hover:scale-110 group-hover:border-bronze group-hover:text-bronze">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-bronze/20"></span>
+            <span class="relative">📞</span>
+          </span>
+          <span class="text-[11px] font-medium leading-tight text-foreground">Instant Call Back</span>
+        </button>
+        <button type="button" onclick="openModal('Schedule a Site Visit')" class="group flex flex-col items-center gap-1.5">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-base text-primary transition-all duration-200 group-hover:scale-110 group-hover:border-bronze group-hover:text-bronze">📅</span>
+          <span class="text-[11px] font-medium leading-tight text-foreground">Scheduled Site Visit</span>
+        </button>
+        <button type="button" onclick="openModal('Schedule a Free Site Visit')" class="group flex flex-col items-center gap-1.5">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-base text-primary transition-all duration-200 group-hover:scale-110 group-hover:border-bronze group-hover:text-bronze">🚗</span>
+          <span class="text-[11px] font-medium leading-tight text-foreground">Free Site Visit</span>
+        </button>
+        <button type="button" onclick="openModal('Download Price Sheet')" class="group flex flex-col items-center gap-1.5">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-base text-primary transition-all duration-200 group-hover:scale-110 group-hover:border-bronze group-hover:text-bronze">🏷️</span>
+          <span class="text-[11px] font-medium leading-tight text-foreground">Best Price</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="brochure" class="bg-muted py-8 text-foreground border-t border-border w-full">
+  <div class="mx-auto max-w-5xl px-4 text-[9px] md:text-[10px] text-muted-foreground">
+    <ul class="list-disc pl-5 space-y-1 mb-4 text-left text-foreground/80">
+      <li>Project Registered under Government of India RERA Act 2016</li>
+      <li>Marketed by Realhubb Ventures Pvt Ltd</li>
+      <li>RERA Project Registration No: PRM/KA/RERA/1251/310/PR/310326/008560</li>
+      <li>Site Address: Hosur Main Road, Kudlu Gate, South Bengaluru</li>
+    </ul>
+    <p class="text-left leading-relaxed mb-4 text-foreground/70">
+      Disclaimer: We are an authorised marketing partner for this project. Provided content is given by respective owners and this website and content is for information purpose only and it does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.
+    </p>
+    <div class="border-t border-border/60 pt-4 text-center">
+      <p>© Copyright <span id="year">2026</span> | <a href="privacy-policy.html" target="_blank" class="text-accent hover:underline">Privacy Policy</a> | <a href="terms-conditions.html" target="_blank" class="text-accent hover:underline">Terms &amp; Conditions</a> | <a href="disclaimer.html" target="_blank" class="text-accent hover:underline">Disclaimer</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE CTA -->
+<div class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 gap-px bg-border md:hidden">
+  <a href="tel:+919980189914" class="bg-primary py-3 text-center text-sm font-semibold text-primary-foreground">📞 Call Now</a>
+  <a href="https://wa.me/919980189914" target="_blank" rel="noopener" class="bg-[#25D366] py-3 text-center text-sm font-semibold text-white">WhatsApp</a>
+  <a href="index.html" class="bg-accent py-3 text-center text-sm font-semibold text-accent-foreground">Home</a>
+</div>
+
+<!-- MODAL -->
+<div id="enquiryModal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay p-4" onclick="if(event.target===this)closeModal()">
+  <div class="relative w-full max-w-md overflow-hidden rounded-lg bg-white shadow-2xl">
+    <button onclick="closeModal()" aria-label="Close" class="absolute right-3 top-3 z-10 rounded-full bg-white/80 px-2 py-1 text-sm text-foreground hover:bg-white">✕</button>
+    <div class="flex items-center justify-center gap-2 bg-white p-4 px-10 border-b">
+      <h3 id="modalTitle" class="text-center text-lg font-bold text-primary">Enquire Now</h3>
+    </div>
+    <div class="p-6">
+      <div id="modalBody">
+        <form class="mt-4 space-y-3" onsubmit="submitModal(event, this)">
+          <input required type="text" name="name" minlength="3" pattern="^[a-zA-Z\s\.]+$" title="Please enter a valid name (at least 3 characters, letters/spaces only)" placeholder="Full Name" class="w-full border-b-2 border-border bg-transparent py-2 text-base outline-none focus:border-primary" />
+          <input type="email" name="email" placeholder="Email (Optional)" class="w-full border-b-2 border-border bg-transparent py-2 text-base outline-none focus:border-primary" />
+          <div class="flex gap-2 border-b-2 border-border">
+            <span class="py-2 text-sm text-muted-foreground">+91</span>
+            <input required type="tel" name="phone" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" placeholder="10-digit Mobile Number" class="w-full bg-transparent py-2 text-base outline-none" />
+          </div>
+          <button type="submit" class="w-full rounded-md bg-primary py-3 text-base font-semibold text-primary-foreground hover:bg-primary/90">Submit &amp; Get Instant Details</button>
+          <label class="flex items-start gap-2 text-[10px] leading-snug text-muted-foreground cursor-pointer">
+            <input required type="checkbox" checked class="mt-0.5 h-3.5 w-3.5 shrink-0 accent-primary" />
+            <span>I authorise CKPC Heart of Harmony Channel Partner to contact me via Call/SMS/WhatsApp.</span>
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHATBOT WIDGET -->
+<svg width="0" height="0" class="hidden" aria-hidden="true">
+  <symbol id="chatbotAvatarSvg" viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="20" fill="oklch(0.75 0.15 75)"/>
+    <path d="M1 39 C1 28 9 23 20 23 C31 23 39 28 39 39 Z" fill="oklch(0.22 0.04 250)"/>
+    <circle cx="20" cy="16" r="9" fill="#F4C7A6"/>
+    <path d="M10.5 15 C10.5 6.5 29.5 6.5 29.5 15 C29.5 10.5 25 8.5 20 8.5 C15 8.5 10.5 10.5 10.5 15 Z" fill="#4A2E1E"/>
+    <path d="M10 15 C9 21.5 11.5 26.5 14.5 27.5 C12.5 23.5 12.5 18.5 12.5 15 Z" fill="#4A2E1E"/>
+    <path d="M30 15 C31 21.5 28.5 26.5 25.5 27.5 C27.5 23.5 27.5 18.5 27.5 15 Z" fill="#4A2E1E"/>
+  </symbol>
+</svg>
+<div class="fixed bottom-20 right-4 z-40 md:bottom-6 md:right-6 lg:right-[380px]">
+  <div id="chatbotWindow" class="absolute bottom-full right-0 mb-3 hidden h-[28rem] max-h-[75vh] w-[90vw] max-w-[320px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10">
+    <div class="flex items-center justify-between gap-2 bg-primary px-4 py-3 text-primary-foreground">
+      <div class="flex items-center gap-2">
+        <svg class="h-9 w-9 shrink-0 rounded-full" aria-hidden="true"><use href="#chatbotAvatarSvg"/></svg>
+        <div>
+          <p class="text-sm font-bold leading-tight">Mina</p>
+          <p class="text-[11px] leading-tight opacity-80">Heart of Harmony Assistant · Online</p>
+        </div>
+      </div>
+      <button type="button" onclick="toggleChatbot()" aria-label="Close chat" class="rounded-full p-1 text-base leading-none transition hover:bg-white/10">✕</button>
+    </div>
+    <div id="chatbotMessages" aria-live="polite" class="flex flex-1 flex-col gap-2 overflow-y-auto bg-muted/40 p-3"></div>
+    <div id="chatbotQuickReplies" class="flex flex-wrap gap-2 border-t border-border bg-white px-3 py-2 empty:hidden"></div>
+    <form id="chatbotForm" class="flex items-center gap-2 border-t border-border bg-white p-2">
+      <input id="chatbotInput" type="text" autocomplete="off" placeholder="Type here…" aria-label="Type your message" class="w-full rounded-full border border-border bg-transparent px-3 py-2 text-sm outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20" />
+      <button type="submit" aria-label="Send message" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze text-white transition hover:opacity-90">➤</button>
+    </form>
+  </div>
+  <button id="chatbotToggle" type="button" onclick="toggleChatbot()" aria-label="Open chat assistant" aria-expanded="false" class="chatbot-bounce relative flex h-14 w-14 items-center justify-center rounded-full bg-bronze text-2xl text-white shadow-2xl ring-1 ring-black/10 transition-transform duration-200 hover:scale-105">
+    <svg id="chatbotIconChat" class="h-11 w-11 rounded-full" aria-hidden="true"><use href="#chatbotAvatarSvg"/></svg>
+    <span id="chatbotIconClose" class="hidden">✕</span>
+    <span id="chatbotBadge" class="absolute -right-1 -top-1 h-5 w-5 rounded-full bg-accent text-center text-[10px] font-bold leading-5 text-white ring-2 ring-white">1</span>
+  </button>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('.policy-date').forEach(el => {
+    el.textContent = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+  });
+
+  const modal = document.getElementById('enquiryModal');
+  const titleEl = document.getElementById('modalTitle');
+  const modalBodyEl = document.getElementById('modalBody');
+  const modalBodyDefaultHTML = modalBodyEl.innerHTML;
+
+  function openModal(heading) {
+    modalBodyEl.innerHTML = modalBodyDefaultHTML;
+    titleEl.textContent = heading || 'Enquire Now';
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbybEOa388tT3YfKyYxx3YG5CVxK64Z2D7lUqZ6-KdsSpmGwtkk87e_xDqKQ_jsdgrM/exec';
+  function sendToSheet(data) {
+    return fetch(SHEET_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new URLSearchParams(data)
+    });
+  }
+  function submitModal(e, form) {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+    }
+    localStorage.setItem('videoUnlocked', 'true');
+    sendToSheet({
+      name: form.name.value,
+      phone: form.phone.value,
+      email: form.email.value,
+      source: titleEl.textContent || 'Enquiry Modal (Policy Page)'
+    }).then(() => {
+      window.location.href = 'thankyou.html';
+    }).catch(() => {
+      window.location.href = 'thankyou.html';
+    });
+  }
+  function submitInline(e, form) {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+    }
+    localStorage.setItem('videoUnlocked', 'true');
+    sendToSheet({
+      name: form.name.value,
+      phone: form.phone.value,
+      email: '',
+      source: 'Express Your Interest (Sidebar Form - Policy Page)'
+    }).then(() => {
+      window.location.href = 'thankyou.html';
+    }).catch(() => {
+      window.location.href = 'thankyou.html';
+    });
+  }
+
+  // CHATBOT
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotMessages = document.getElementById('chatbotMessages');
+  const chatbotQuickReplies = document.getElementById('chatbotQuickReplies');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotBadge = document.getElementById('chatbotBadge');
+  const chatbotToggleBtn = document.getElementById('chatbotToggle');
+  const chatbotIconChat = document.getElementById('chatbotIconChat');
+  const chatbotIconClose = document.getElementById('chatbotIconClose');
+
+  const CHATBOT_WA_LINK = "https://wa.me/919980189914?text=Hi%2C%20I%27m%20interested%20in%20CKPC%20Heart%20of%20Harmony.%20Please%20share%20the%20brochure%2C%20floor%20plan%20%26%20price%20list.";
+
+  const CHATBOT_MAIN_OPTIONS = [
+    { label: '📄 Brochure', value: 'brochure', modalTitle: 'Download Brochure' },
+    { label: '🏠 Floor Plan', value: 'floorplan', modalTitle: 'Request Floor Plan' },
+    { label: '💰 Price List', value: 'price', modalTitle: 'Download Price Sheet' },
+    { label: '📅 Schedule Site Visit', value: 'visit', modalTitle: 'Schedule a Site Visit' },
+    { label: '💬 Send Details on WhatsApp', value: 'whatsapp', modalTitle: '' },
+  ];
+
+  let chatbotOpened = false;
+  let chatbotState = 'menu'; // menu -> askName -> menu
+  let chatbotPendingModalTitle = 'Enquire Now';
+  let chatbotLeadName = '';
+
+  function toggleChatbot() {
+    const isHidden = chatbotWindow.classList.contains('hidden');
+    if (isHidden) {
+      chatbotWindow.classList.remove('hidden');
+      chatbotWindow.classList.add('flex');
+      chatbotIconChat.classList.add('hidden');
+      chatbotIconClose.classList.remove('hidden');
+      chatbotToggleBtn.classList.remove('chatbot-bounce');
+      chatbotToggleBtn.setAttribute('aria-expanded', 'true');
+      if (chatbotBadge) chatbotBadge.classList.add('hidden');
+      if (!chatbotOpened) {
+        chatbotOpened = true;
+        chatbotBotMessage('Welcome to <strong>CKPC Heart of Harmony</strong>! 👋<br>How can I assist you today?');
+        setTimeout(() => chatbotShowQuickReplies(CHATBOT_MAIN_OPTIONS), 600);
+      }
+      chatbotInput.focus();
+    } else {
+      chatbotWindow.classList.add('hidden');
+      chatbotWindow.classList.remove('flex');
+      chatbotIconChat.classList.remove('hidden');
+      chatbotIconClose.classList.add('hidden');
+      chatbotToggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function chatbotAddMessage(html, who) {
+    const wrap = document.createElement('div');
+    wrap.className = who === 'user' ? 'flex justify-end' : 'flex justify-start';
+    const bubble = document.createElement('div');
+    bubble.className = who === 'user'
+      ? 'max-w-[85%] rounded-2xl rounded-br-sm bg-bronze px-3 py-2 text-sm text-white'
+      : 'max-w-[85%] rounded-2xl rounded-bl-sm bg-white px-3 py-2 text-sm text-foreground shadow-sm ring-1 ring-border';
+    bubble.innerHTML = html;
+    wrap.appendChild(bubble);
+    chatbotMessages.appendChild(wrap);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+  function chatbotUserMessage(text) {
+    chatbotAddMessage(text.replace(/</g, '&lt;'), 'user');
+  }
+  function chatbotBotMessage(html) {
+    chatbotShowTyping();
+    setTimeout(() => {
+      chatbotHideTyping();
+      chatbotAddMessage(html, 'bot');
+    }, 500);
+  }
+  function chatbotShowTyping() {
+    const wrap = document.createElement('div');
+    wrap.id = 'chatbotTyping';
+    wrap.className = 'flex justify-start';
+    wrap.innerHTML = '<div class="flex items-center gap-1 rounded-2xl rounded-bl-sm bg-white px-3 py-2.5 shadow-sm ring-1 ring-border">'
+      + '<span class="chatbot-typing-dot h-1.5 w-1.5 rounded-full bg-muted-foreground"></span>'
+      + '<span class="chatbot-typing-dot h-1.5 w-1.5 rounded-full bg-muted-foreground" style="animation-delay:0.15s"></span>'
+      + '<span class="chatbot-typing-dot h-1.5 w-1.5 rounded-full bg-muted-foreground" style="animation-delay:0.3s"></span></div>';
+    chatbotMessages.appendChild(wrap);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+  function chatbotHideTyping() {
+    const el = document.getElementById('chatbotTyping');
+    if (el) el.remove();
+  }
+  function chatbotShowQuickReplies(options) {
+    chatbotQuickReplies.innerHTML = '';
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'rounded-full border border-bronze/40 bg-bronze/5 px-3 py-1.5 text-xs font-semibold text-bronze transition hover:bg-bronze hover:text-white';
+      btn.textContent = opt.label;
+      btn.onclick = () => chatbotHandleOption(opt);
+      chatbotQuickReplies.appendChild(btn);
+    });
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+  function chatbotClearQuickReplies() {
+    chatbotQuickReplies.innerHTML = '';
+  }
+  function chatbotAskName(modalTitle, message) {
+    chatbotPendingModalTitle = modalTitle;
+    chatbotState = 'askName';
+    chatbotBotMessage(message);
+  }
+  function chatbotOpenEnquiryModal(title) {
+    openModal(title);
+    const nameInput = document.querySelector('#modalBody input[name="name"]');
+    if (nameInput) nameInput.value = chatbotLeadName;
+  }
+  function chatbotProcessSelection(opt) {
+    if (opt.value === 'whatsapp') {
+      chatbotBotMessage("Sure! Opening WhatsApp so our team can share the brochure, floor plan &amp; price list with you directly. 💬");
+      setTimeout(() => window.open(CHATBOT_WA_LINK, '_blank'), 700);
+      setTimeout(() => chatbotShowQuickReplies(CHATBOT_MAIN_OPTIONS), 1200);
+      return;
+    }
+    chatbotAskName(opt.modalTitle, "Great choice! May I know your name, please? 🙂");
+  }
+  function chatbotHandleOption(opt) {
+    chatbotUserMessage(opt.label);
+    chatbotClearQuickReplies();
+    chatbotProcessSelection(opt);
+  }
+
+  chatbotForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const val = chatbotInput.value.trim();
+    if (!val) return;
+    chatbotUserMessage(val);
+    chatbotInput.value = '';
+
+    if (chatbotState === 'askName') {
+      const cleanName = val.trim();
+      const namePattern = /^[a-zA-Z\s\.]+$/;
+      if (cleanName.length < 3 || !namePattern.test(cleanName)) {
+        chatbotBotMessage("Please enter a valid name (at least 3 characters, letters & spaces only) 🙂");
+        return;
+      }
+      chatbotLeadName = cleanName;
+      chatbotState = 'menu';
+      chatbotBotMessage(`Thanks, ${chatbotLeadName.split(' ')[0]}! Just pop your number into the form and our team will send the details right away. 📋`);
+      setTimeout(() => chatbotOpenEnquiryModal(chatbotPendingModalTitle), 900);
+      setTimeout(() => chatbotShowQuickReplies(CHATBOT_MAIN_OPTIONS), 1500);
+      return;
+    }
+
+    const lower = val.toLowerCase();
+    let matched = null;
+    if (lower.includes('brochure')) matched = CHATBOT_MAIN_OPTIONS[0];
+    else if (lower.includes('floor') || lower.includes('plan')) matched = CHATBOT_MAIN_OPTIONS[1];
+    else if (lower.includes('price') || lower.includes('cost') || lower.includes('cr')) matched = CHATBOT_MAIN_OPTIONS[2];
+    else if (lower.includes('visit') || lower.includes('site')) matched = CHATBOT_MAIN_OPTIONS[3];
+    else if (lower.includes('whatsapp')) matched = CHATBOT_MAIN_OPTIONS[4];
+
+    if (matched) {
+      chatbotClearQuickReplies();
+      chatbotProcessSelection(matched);
+    } else {
+      chatbotAskName('Enquire Now', "Thanks for reaching out! Let me connect you with our team. May I know your name, please? 🙂");
+    }
+  });
+</script>
+</body>
+</html>

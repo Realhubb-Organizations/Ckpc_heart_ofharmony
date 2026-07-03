@@ -94,8 +94,12 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white shadow-sm w-full">
     <div class="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 py-2">
-      <a href="index.html#hero" aria-label="CKPC Heart of Harmony home" class="flex shrink-0 items-center gap-2">
-        <img src="ckpc-logo.png" alt="CKPC Authorised Channel Partner" title="CKPC Authorised Channel Partner Logo" class="h-12 w-auto md:h-14" />
+      <a href="index.html#hero" aria-label="CKPC Heart of Harmony home" class="flex shrink-0 items-center gap-3">
+        <img src="ckpc-logo.png" alt="CKPC Logo" title="CKPC Logo" class="h-7 w-auto md:h-8" />
+        <div class="flex flex-col justify-center border-l border-border pl-3">
+          <span class="font-serif text-base md:text-lg font-bold leading-none text-primary">Heart of Harmony</span>
+          <span class="font-sans text-[9px] md:text-[10px] font-semibold tracking-wider text-bronze uppercase leading-none mt-1">Authorised Channel Partner</span>
+        </div>
       </a>
       <nav aria-label="Primary" class="hidden flex-1 lg:block">
         <ul class="flex items-center justify-center gap-1 text-sm font-medium text-foreground">
@@ -173,32 +177,23 @@
   </main>
 
   <!-- FOOTER -->
-  <footer id="brochure" class="bg-primary py-12 text-primary-foreground w-full">
-    <div class="mx-auto grid max-w-6xl gap-8 px-4 md:grid-cols-2">
-      <div>
-        <span class="inline-flex items-center gap-2 rounded-md bg-white p-2">
-          <img src="ckpc-logo.png" alt="CKPC Authorised Channel Partner" title="CKPC Footer Logo" class="h-12 w-auto" />
-        </span>
-        <p class="mt-4 text-sm opacity-90">Authorised Channel Partner for CKPC Heart of Harmony, Hosur Main Road, Bengaluru. RERA-compliant bookings and end-to-end home-buying support.</p>
-        <div class="mt-6 space-y-3 text-sm opacity-90">
-          <p class="font-semibold">Agent RERA Registration No. :</p>
-          <p class="leading-6">PRM/KA/RERA/1251/309/AG/240926/005147</p>
-          <p class="font-semibold">Project RERA Registration No. :</p>
-          <p class="leading-6"><a href="https://rera.karnataka.gov.in/" target="_blank" rel="noopener" class="underline hover:text-gold">PRM/KA/RERA/1251/310/PR/310326/008560</a></p>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-base font-bold text-gold">Regulatory Information Disclaimer</h3>
-        <p class="mt-3 text-xs opacity-80">Disclaimer: The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only. This website belongs to Realhubb Ventures Pvt Ltd, an authorized channel partner (Agent RERA Registration No. PRM/KA/RERA/1251/309/AG/240926/005147). It is not the official website of the developer (CKPC). We may share data with RERA registered brokers/companies for further processing. We may also send updates to the mobile number/email id registered with us.</p>
-        <p class="mt-4 text-xs opacity-80">As an authorized marketing partner, we provide verified project updates and insights. By submitting your details, you express interest and consent to receive communication via call, SMS, or email. To provide seamless service, your information may be shared with our RERA-registered associates for expert assistance.</p>
-      </div>
-    </div>
-    <div class="mx-auto mt-8 flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-xs opacity-70 sm:flex-row">
-      <p>© <span id="year"></span> CKPC Heart of Harmony · Authorised Channel Partner</p>
-      <p class="flex gap-4">
-        <button type="button" onclick="openPolicyModal('privacyModal')" class="hover:text-gold hover:underline">Privacy Policy</button>
-        <button type="button" onclick="openPolicyModal('termsModal')" class="hover:text-gold hover:underline">Terms and Conditions</button>
+  <!-- FOOTER -->
+  <footer id="brochure" class="bg-muted py-8 text-foreground border-t border-border w-full">
+    <div class="mx-auto max-w-5xl px-4 text-xs md:text-sm text-muted-foreground">
+      <ul class="list-disc pl-5 space-y-2 mb-6 text-left text-foreground/80">
+        <li>Project Registered under Government of India RERA Act 2016</li>
+        <li>Marketed by Realhubb Ventures Pvt Ltd</li>
+        <li>RERA Project Registration No: PRM/KA/RERA/1251/310/PR/310326/008560</li>
+        <li>Site Address: Hosur Main Road, Kudlu Gate, South Bengaluru</li>
+      </ul>
+
+      <p class="text-left leading-relaxed mb-6 text-foreground/70">
+        Disclaimer: We are an authorised marketing partner for this project. Provided content is given by respective owners and this website and content is for information purpose only and it does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.
       </p>
+
+      <div class="border-t border-border/60 pt-6 text-center text-xs">
+        <p>© Copyright <span id="year">2026</span> | <a href="privacy-policy.html" target="_blank" class="text-accent hover:underline">Privacy Policy</a> | <a href="terms-conditions.html" target="_blank" class="text-accent hover:underline">Terms &amp; Conditions</a> | <a href="disclaimer.html" target="_blank" class="text-accent hover:underline">Disclaimer</a></p>
+      </div>
     </div>
   </footer>
 
@@ -209,97 +204,12 @@
     <a href="index.html" class="bg-accent py-3 text-center text-sm font-semibold text-accent-foreground">Home</a>
   </div>
 
-  <!-- PRIVACY POLICY MODAL -->
-  <div id="privacyModal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay p-4" onclick="if(event.target===this)closePolicyModal('privacyModal')">
-    <div class="relative flex max-h-[85vh] w-full max-w-2xl flex-col overflow-hidden rounded-lg bg-white shadow-2xl">
-      <button onclick="closePolicyModal('privacyModal')" aria-label="Close" class="absolute right-3 top-3 z-10 rounded-full bg-white/80 px-2 py-1 text-sm text-foreground hover:bg-white">✕</button>
-      <div class="flex items-center justify-center gap-2 bg-white p-4 border-b border-border">
-        <img src="ckpc-logo.png" alt="CKPC Authorised Channel Partner" title="CKPC Privacy Policy Logo" class="h-10 w-auto" />
-      </div>
-      <div class="overflow-y-auto p-6">
-        <h3 class="text-xl font-bold text-primary">Privacy Policy</h3>
-        <p class="mt-1 text-xs text-muted-foreground">Last Updated: <span class="policy-date"></span></p>
-        <p class="mt-4 text-sm leading-6 text-foreground/90">This website is managed by <strong>Realhubb Ventures Pvt Ltd</strong>, an authorised RERA-registered real estate agent (RERA Registration No. PRM/KA/RERA/1251/309/AG/240926/005147) and channel partner for CKPC Heart of Harmony, Hosur Main Road, Bengaluru. We respect your privacy and are committed to protecting any personal information you share with us through this website.</p>
 
-        <h4 class="mt-5 text-sm font-bold text-foreground">1. Information We Collect</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">When you submit an enquiry, schedule a site visit, or download our brochure, we may collect details such as your name, phone number, email address and any other information you choose to provide.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">2. How We Use Your Information</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">Your information is used to respond to your enquiry, share project updates, brochures, pricing and floor plans, and to assist with site visits and bookings for Heart of Harmony. By submitting your details, you consent to receive communication via Call, SMS, WhatsApp or Email.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">3. Sharing of Information</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">To provide seamless service, we may share your data with RERA-registered associates, brokers and the project developer (CKPC) for further processing and expert assistance.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">4. Data Security</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">We take reasonable precautions to protect your personal information from unauthorised access, alteration, disclosure or destruction.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">5. Your Choices</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">You may opt out of further communication at any time by contacting us at +91 99801 89914.</p>
-
-        <div class="mt-6 flex justify-end border-t border-border pt-4">
-          <button onclick="closePolicyModal('privacyModal')" class="rounded-md bg-primary px-6 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TERMS & CONDITIONS MODAL -->
-  <div id="termsModal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay p-4" onclick="if(event.target===this)closePolicyModal('termsModal')">
-    <div class="relative flex max-h-[85vh] w-full max-w-2xl flex-col overflow-hidden rounded-lg bg-white shadow-2xl">
-      <button onclick="closePolicyModal('termsModal')" aria-label="Close" class="absolute right-3 top-3 z-10 rounded-full bg-white/80 px-2 py-1 text-sm text-foreground hover:bg-white">✕</button>
-      <div class="flex items-center justify-center gap-2 bg-white p-4 border-b border-border">
-        <img src="ckpc-logo.png" alt="CKPC Authorised Channel Partner" title="CKPC Terms & Conditions Logo" class="h-10 w-auto" />
-      </div>
-      <div class="overflow-y-auto p-6">
-        <h3 class="text-xl font-bold text-primary">Terms &amp; Conditions</h3>
-        <p class="mt-1 text-xs text-muted-foreground">Last Updated: <span class="policy-date"></span></p>
-        <p class="mt-4 text-sm leading-6 text-foreground/90">Welcome to our website. By accessing or using this website, you agree to comply with and be bound by the following Terms &amp; Conditions. Please read them carefully.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">1. Website Purpose and Authorised Status</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">This website is managed by <strong>Realhubb Ventures Pvt Ltd</strong>, an authorised RERA-registered real estate agent (RERA Registration No. PRM/KA/RERA/1251/309/AG/240926/005147) and channel partner of CKPC for Heart of Harmony, Hosur Main Road. This website is for informational and advertising purposes only and is not the official builder website.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">2. Pricing and Availability Disclaimers</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">All information on this website, including but not limited to pricing, apartment configurations, unit availability, layouts and project timelines, is dynamic and subject to change without prior notice. Pricing shown is indicative and final pricing will be determined upon booking confirmation with the official developer.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">3. Visual Representation Disclaimer</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">Images, layouts, renders and visual simulations showcased on this website are for representational and artistic purposes only. They do not represent finalised build specifications, and actual designs, amenities or layouts may differ.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">4. Communication &amp; Consent</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">By submitting your details on this website, you express interest in the project and consent to receive communication from us and our RERA-registered associates via Call, SMS, WhatsApp or Email regarding project updates and offers.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">5. No Warranty &amp; Limitation of Liability</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">While we strive to keep information on this website accurate and up to date, we make no warranties of any kind about its completeness or reliability, and shall not be liable for any loss or damage arising from its use.</p>
-
-        <h4 class="mt-5 text-sm font-bold text-foreground">6. Governing Law</h4>
-        <p class="mt-2 text-sm leading-6 text-foreground/90">These terms are governed by the laws of India, and any disputes shall be subject to the jurisdiction of the courts in Bangalore, Karnataka.</p>
-
-        <div class="mt-6 flex justify-end border-t border-border pt-4">
-          <button onclick="closePolicyModal('termsModal')" class="rounded-md bg-primary px-6 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     
-    document.querySelectorAll('.policy-date').forEach(el => {
-      el.textContent = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
-    });
 
-    function openPolicyModal(id) {
-      const policyModal = document.getElementById(id);
-      policyModal.classList.remove('hidden');
-      policyModal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePolicyModal(id) {
-      const policyModal = document.getElementById(id);
-      policyModal.classList.add('hidden');
-      policyModal.classList.remove('flex');
-      document.body.style.overflow = '';
-    }
   </script>
 </body>
 </html>
